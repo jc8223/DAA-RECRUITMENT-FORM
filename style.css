@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Alumni+Sans+Pinstripe&family=DM+Serif+Display&display=swap');
+
+ html {
+	 font-size: 10px;
+	 -webkit-tap-highlight-color: rgba(187, 36, 36, 0.699);
+	 box-sizing: border-box;
+	  /* overflow-y: scroll; overflow-x:hidden;  */
+     scroll-behavior: smooth;
+	 Overflow-x:scroll;
+	/* Overflow-y:scroll; */
+
+
+}
+ *, *:before, *:after {
+	 margin: 0;
+	 padding: 1;
+	 box-sizing: inherit;
+	 
+}
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
+  }
+ body {
+	 font-family: 'Poppins', sans-serif;
+	 font-size: 16px;
+	 line-height: 1.428571429;
+	 font-weight: 400;
+	 color: white;
+	 min-height: 100vh;
+	margin: 20px;
+	padding: 20px;
+	background-color: #586ccd;
+	background-image:url("jadu.gif");
+	animation:  1s  infinite;
+	background-repeat:repeat;
+}
+h3{
+	border: 1px solid;
+	border-radius: 50px;
+}
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #5cce1a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 30px;
+}
+@keyframes textclip {
+	to {
+	  background-position: 200% center;
+	}
+  }
+
+
+ .row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.grid-container {
+	gap: 50px;
+  }
+
+
+ .section {
+	border: white;
+	border-radius: 30px;
+	
+ box-shadow:inset 0 0 0 2000px transparent;
+
+	 position: relative;
+	 overflow: hidden;
+	 width: 80vh;
+	 display: flex;
+	 justify-content: center;
+	 flex-direction: column;
+     /* height: 100vh; */
+}
+ header, main, footer {
+	 display: block;
+	 position: relative;
+	 z-index: 1;
+}
+ header {
+	 padding: 48px;
+}
+ @media (max-width: 440px) {
+	 header {
+		 padding: 48px 24px;
+	}
+	body{
+		margin: 0;
+		padding: 0;
+		
+	}
+	.section{
+		border-radius: 0px;
+		border: none;
+	}
+}
+ header > h3 {
+	 font-size: 44px;
+	 font-weight: 700;
+	 margin-bottom: 8px;
+	 
+}
+ header > h4 {
+	 font-size: 22px;
+	 font-weight: 400;
+	 letter-spacing: 1px;
+	 font-family: 'Combo', cursive;
+}
+ main {
+	 flex: 1;
+	 padding: 0 48px;
+}
+ @media (max-width: 440px) {
+	 main {
+		 padding: 0 24px;
+	}
+}
+ footer {
+	 width: 100%;
+	 background-color: rgba(95, 145, 255, 1), rgba(0, 0, 255, 0);
+	 padding: 29px;
+	 font-size: 22px;
+	 /* align-self: center; */
+	 text-align: center;
+	 /* margin: 5px; */
+	 height: 100px;
+}
+ footer a {
+	 color: #fff;
+	 font-weight: 700;
+	 text-decoration: none;
+}
+ footer a:hover {
+	 text-decoration: underline;
+}
+ form {
+	 height: 100%;
+	 display: flex;
+	 justify-content: center;
+	 flex-direction: column;
+}
+ .label {
+	 color: black;
+	 font-size: 16px;
+	 font-weight: 500;
+	 padding: 4px;
+}
+ small {
+	 display: none;
+}
+ small.errorOnce {
+	 margin-top: 2px;
+}
+ .form-item input[type="text"], .form-item input[type="number"], .form-item input[type="email"] , .form-item input[type="URL"] , .form-item label[type="option"] {
+	 display: flexbox;
+	 font-size: 16px;
+	 width: 100%;
+	 background-color: white;
+	 border-radius: 5px;
+	 color: black;
+	 border: none;
+	 border-bottom: 1px solid black;
+	 opacity: .5;
+	 padding: 8px 14px;
+	 appearance: none;
+	 font-family: 'Poppins', sans-serif;
+	 outline: none;
+	 display: grid;
+	 grid-template-columns: auto;
+	 gap: 50px;
+}
+.select{
+	 font-size: 16px;
+	 width: 100%;
+	 background-color: transparent;
+	 border: rgb(86, 77, 220);
+	 border-bottom: 1px solid #5f5fb4;
+	 padding: 5px 0;
+	 appearance: none;
+	 outline: none;
+}
+
+
+ .form-item i {
+	 font-size: 16px;
+	 color: red;
+	 padding: 6px;
+	 font-family: 'Poppins', sans-serif;
+}
+ .box-item {
+	 height: 60px;
+	 margin-bottom: 16px;
+}
+ .form-item-double {
+	 display: flex;
+	 padding: 6px;
+}
+ .form-item-double .form-item {
+	 flex: 1 1 auto;
+	 padding: 6px;
+}
+ .form-item-double .form-item:nth-child(1) {
+	 padding-right: 8px;
+	 padding: 6px;
+}
+ .form-item-double .form-item:nth-child(2) {
+	 padding-left: 4px;
+	 padding: 6px;
+}
+ .form-item-triple {
+	 display: flex;
+	 align-items: center;
+	 padding: 6px;
+}
+ .form-item-triple .radio-label {
+	 flex: 1 1 auto;
+	 text-align: left;
+	 padding: 6px;
+}
+ .form-item-triple .radio-label label {
+	 display: inline-block;
+	 vertical-align: middle;
+	 padding: 6px;
+}
+ .form-item-triple .form-item {
+	 flex: 3 1 auto;
+	 text-align: center;
+	 margin: 0;
+	 padding: 6px;
+}
+ .form-item-triple .form-item label, .form-item-triple .form-item input[type="radio"]  {
+	 display: inline-block;
+	 vertical-align: middle;
+	 margin: 0 4px;
+	 padding: 6px;
+}
+ ::-webkit-input-placeholder {
+	/* WebKit, Blink, Edge */
+	 color: black;
+	 font-weight: bolder;
+	 font-size: 16px;
+}
+ :-moz-placeholder {
+	/* Mozilla Firefox 4 to 18 */
+	 color: rgba(226, 227, 232, .75);
+	 font-size: 16px;
+	 font-weight: bolder;
+	 opacity: 0.5;
+}
+ ::-moz-placeholder {
+	/* Mozilla Firefox 19+ */
+	 color: rgba(226, 227, 232, .75);
+	 font-weight: bolder;
+	 font-size: 16px;
+	 opacity: 0.5;
+}
+ :-ms-input-placeholder {
+	/* Internet Explorer 10-11 */
+	 color: rgba(226, 227, 232, .75);
+	 font-weight: bolder;
+	 font-size: 16px;
+}
+ ::-ms-input-placeholder {
+	/* Microsoft Edge */
+	 color: rgba(226, 227, 232, .75);
+	 font-weight: bolder;
+	 font-size: 16px;
+}
+ .submit {
+	 display: inline-block;
+	 font-size: 25px;
+	 font-weight: 700;
+	 letter-spacing: 1px;
+	 padding: 8px 40px;
+	 margin: 20px;
+	 border: 2px solid blue;
+	 border-radius: 10px;
+	 color: blue;
+	 background-color: #fff;
+	 cursor: pointer;
+	 transition: 1s;
+}
+ .submit:hover {
+	 background-color: blue;
+	 color: white;
+}
+ .wave {
+	 position: absolute;
+	 top: 0;
+	 left: 50%;
+	 width: 800px;
+	 height: 800px;
+	 margin-top: -600px;
+	 margin-left: -400px;
+	 background: #252e45;
+	 border-radius: 40%;
+	 animation: shift 20s infinite linear;
+	 z-index: 0;
+}
+ @keyframes shift {
+	 from {
+		 transform: rotate(360deg);
+	}
+}
+ 
