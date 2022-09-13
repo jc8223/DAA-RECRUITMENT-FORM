@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css" />
 <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,11 +27,13 @@
       border: none;
       font-weight: bolder;
       opacity: .5;
+      font-size: 16px;
       border-radius: 4px;
       background-color: white;
       border-bottom: solid white;
       font-family: 'Poppins', sans-serif;
       padding: 6px;
+      margin-top: 6px;
     }
     textarea {
       width: 100%;
@@ -39,15 +42,15 @@
       box-sizing: border-box;
       font-weight: bold;
       color: black;
-      color: #000000;
       opacity: .5;
       border: 2px , white;
       border-radius: 4px;
       background-color: white;
-      color: transparent;
       font-size: 16px;
       font-family: 'Poppins', sans-serif;
       resize: none;
+      margin-top: 6px;
+      margin-bottom: 20px;
   }
     </style>
   <body >
@@ -59,7 +62,7 @@
         
     <header style="text-align: center;">
       
-      <img style="height: 80px; text-align: center;" src="./DAA logo.png" alt="" class="center" >
+      <img style="height: 120px; text-align: center;" src="./DAA logo.png" alt="" class="center" >
       <h2 class="animate-charcter">DIRECTORATE OF ALUMNI AFFAIRS</h2>
       <h2 class="animate-charcter" >PRESENTS</h2>
 
@@ -78,7 +81,7 @@
               <input
                 type="text"
                 name="Phone"
-                placeholder="Whatsapp Number"
+                placeholder="Whatsapp Number*"
                 value=""
                 required=""
                 data-count="10"
@@ -96,20 +99,10 @@
               />
             
             </div>
-
-            
-            <div class="form-item box-item">
-              <label class="label"></label>
-                  <select id="country"  name="gender">
-                    <option name="gender" value="none">gender</option>
-                    <option name="gender" value="Male">Male</option>
-                    <option name="gender" value="Female">Female</option>
-                  </select>
-            </div>
             
               <div class="form-item box-item">
                 <label class="label"></label>
-                    <select id="country"  name="year_of_studing">
+                    <select id="country"  name="year_of_studing*">
                       <option name="Year_of_studing" value="none">Year of studing</option>
                       <option name="Year_of_studing" value="I year">I Year</option>
                       <option name="Year_of_studing" value="II year">II Year</option>
@@ -120,14 +113,15 @@
               <input
                 type="text"
                 name="Registration_Number"
-                placeholder="Registration Number"
+                placeholder="Registration Number*"
                 required=""
               />
+            </div>
             
               <div class="form-item box-item" >
                 <label class="label"></label>
                     <select id="country" name="Preference 1">
-                      <option name="Preference 1" value="Preference 1">Preference1</option>
+                      <option name="Preference 1" value="Preference 1">Domains you are interested in: (Preference 1) </option>
                       <option name="Preference 1"  value="technical">technical</option>
                       <option name="Preference 1" value="corporate">corporate</option>
                       <option name="Preference 1" value="cultural">cultural</option>
@@ -139,13 +133,12 @@
                       <option name="Preference 1" value="Social Media">Social Media</option>
                       <option name="Preference 1" value="Emceeing">Emceeing</option>
                     </select>
-              </div>
-            </div>
+                </div>
 
             <div class="form-item box-item">
               <label class="label"></label>
                   <select id="country" name="Preference 2">
-                      <option name="Preference 2" value="Preference 2">Preference 2</option>
+                      <option name="Preference 2" value="Preference 2">Domains you are interested in: (Preference 2)</option>
                       <option name="Preference 2"  value="technical">technical</option>
                       <option name="Preference 2" value="corporate">corporate</option>
                       <option name="Preference 2" value="cultural">cultural</option>
@@ -207,18 +200,19 @@
         <!-- <i class="wave"></i> -->
       </section>
     </div>
-
     <script>
       const scriptURL =
         "https://script.google.com/macros/s/AKfycbzh2YRv1BQ9-sSSaN4L3ikr57QeU5JXweQpjcQ48mXknU9wPIXUpjkNl-1IR_QUvfA/exec";
       const form = document.forms["google-sheet"];
 
-      form.addEventListener("submit", (e) => {
+      submit.addEventListener("submit", (e) => {
         e.preventDefault();
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) => (window.location.href = "thanks.html"))
           .catch((error) => console.error("Error!", error.message));
       });
     </script>
+  </body>
+</html>
   </body>
 </html>
