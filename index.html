@@ -87,14 +87,11 @@
             <div class="form-item box-item">
               <input
                 type="text"
-                name="Phone"
-                placeholder="Whatsapp Number*"
-                value=""
+                name="Registration_Number"
+                placeholder="Registration Number*"
                 required=""
-                data-count="10"
               />
             </div>
-
             <div class="form-item box-item">
               <input
                 type="email"
@@ -106,6 +103,17 @@
               />
             
             </div>
+            <div class="form-item box-item">
+              <input
+                type="text"
+                name="Phone"
+                placeholder="Contact*"
+                value=""
+                required=""
+                data-count="10"
+              />
+            </div>
+
             
               <div class="form-item box-item">
                 <label class="label"></label>
@@ -116,63 +124,55 @@
                     </select>
               </div>
 
-            <div class="form-item box-item">
-              <input
-                type="text"
-                name="Registration_Number"
-                placeholder="Registration Number*"
-                required=""
-              />
-            </div>
+              <div class="form-item box-item">
+                <input
+                  type="text"
+                  name="Branch"
+                  placeholder="Branch*"
+                  required=""
+                />
+              </div>
+
+              <div class="form-item box-item">
+                <input
+                  type="text"
+                  name="Department"
+                  placeholder="Department*"
+                  required=""
+                />
+              </div>
             
               <div class="form-item box-item" >
                 <label class="label"></label>
-                    <select id="country" name="Preference 1">
-                      <option name="Preference 1" value="Preference 1">Domains you are interested in: (Preference 1) </option>
-                      <option name="Preference 1"  value="technical">technical</option>
-                      <option name="Preference 1" value="corporate">corporate</option>
-                      <option name="Preference 1" value="cultural">cultural</option>
-                      <option name="Preference 1"  value="Event Management & Public Relation">Event Management & Public Relation</option>
-                      <option name="Preference 1" value="Operations">Operations</option>
-                      <option name="Preference 1" value="VFX & Graphic Designing">VFX & Graphic Designing</option>
-                      <option name="Preference 1" value="Photography">Photography</option>
-                      <option name="Preference 1" value="Content">Content</option>
-                      <option name="Preference 1" value="Social Media">Social Media</option>
-                      <option name="Preference 1" value="Emceeing">Emceeing</option>
+                    <select id="country" name="Preference1">
+                      <option name="Preference1" value="Preference1">Domains you are interested in: (Preference 1) </option>
+                      <option name="Preference1" value="corporate">corporate</option>
+                      <option name="Preference1" value="Operations">Operations</option>
+                      <option name="Preference1" value="VFX & Graphic Designing">VFX & Graphic Designing</option>
+                      <option name="Preference1" value="Content">Content</option>
+                      <option name="Preference1" value="cultural">cultural</option>
+                      <option name="Preference1" value="Emceeing">Emceeing</option>
+                      <option name="Preference1" value="Photography">Photography</option>
+                      <option name="Preference1" value="Social Media">Social Media</option>
                     </select>
                 </div>
 
             <div class="form-item box-item">
               <label class="label"></label>
-                  <select id="country" name="Preference 2">
-                      <option name="Preference 2" value="Preference 2">Domains you are interested in: (Preference 2)</option>
-                      <option name="Preference 2"  value="technical">technical</option>
-                      <option name="Preference 2" value="corporate">corporate</option>
-                      <option name="Preference 2" value="cultural">cultural</option>
-                      <option name="Preference 2"  value="Event Management & Public Relation">Event Management & Public Relation</option>
-                      <option name="Preference 2" value="Operations">Operations</option>
-                      <option name="Preference 2" value="VFX & Graphic Designing">VFX & Graphic Designing</option>
-                      <option name="Preference 2" value="Photography">Photography</option>
-                      <option name="Preference 2" value="Content">Content</option>
-                      <option name="Preference 2" value="Social Media">Social Media</option>
-                      <option name="Preference 2" value="Emceeing">Emceeing</option>
+                  <select id="country" name="Preference2">
+                      <option name="Preference2" value="Preference2">Domains you are interested in: (Preference 2)</option>
+                      <option name="Preference2" value="corporate">corporate</option>
+                      <option name="Preference2" value="Operations">Operations</option>
+                      <option name="Preference2" value="VFX & Graphic Designing">VFX & Graphic Designing</option>
+                      <option name="Preference2" value="Content">Content</option>
+                      <option name="Preference2" value="cultural">cultural</option>
+                      <option name="Preference2" value="Emceeing">Emceeing</option>
+                      <option name="Preference2" value="Photography">Photography</option>
+                      <option name="Preference2" value="Social Media">Social Media</option>
                     </select>
             </div>
             <label class="label"></label>
             <textarea name="Question1" placeholder="Why do you want to join Directorate of Almuni Affairs ?"></textarea>
-            <label class="label"></label>
-            <textarea name="Question2" placeholder="Why do you want to join Directorate of Almuni Affairs ?"></textarea>
-            <label name="resume" class="label"></label>
-            <div class="form-item box-item">
-              <input
-                type="url"
-                name="resume"
-                placeholder="Google drive link for resume[with access to all] "
-                value=""
-                
-              />
-            
-            </div>
             <div class="form-item box-item">
               <input
                 type="url"
@@ -212,7 +212,7 @@
         "https://script.google.com/macros/s/AKfycbzh2YRv1BQ9-sSSaN4L3ikr57QeU5JXweQpjcQ48mXknU9wPIXUpjkNl-1IR_QUvfA/exec";
       const form = document.forms["google-sheet"];
 
-      submit.addEventListener("submit", (e) => {
+      form.addEventListener("submit", (e) => {
         e.preventDefault();
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) => (window.location.href = "thanks.html"))
