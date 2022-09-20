@@ -31,16 +31,14 @@
 	 font-weight: 400;
 	 color: white;
 	 min-height: 100vh;
+	 width: 100%;
 	margin: 20px;
 	padding: 20px;
-	background-color: #586ccd;
-	background-image:url("jadu.gif");
-	animation:  1s  infinite;
-	background-repeat:repeat;
 }
 h3{
 	border: 1px solid;
 	border-radius: 50px;
+	margin-top: 20px;
 }
 
 .animate-charcter
@@ -48,8 +46,8 @@ h3{
    text-transform: uppercase;
   background-image: linear-gradient(
     -225deg,
-    #5cce1a 29%,
-    #ff1361 67%,
+    white 15%,
+    rgb(59, 142, 219) 67%,
     #fff800 100%
   );
   background-size: auto auto;
@@ -62,6 +60,7 @@ h3{
   animation: textclip 2s linear infinite;
   display: inline-block;
       font-size: 30px;
+	  margin-top: 20px;
 }
 @keyframes textclip {
 	to {
@@ -182,7 +181,6 @@ h3{
 	 color: black;
 	 border: none;
 	 border-bottom: 1px solid black;
-	 opacity: .5;
 	 padding: 8px 14px;
 	 appearance: none;
 	 font-family: 'Poppins', sans-serif;
