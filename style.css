@@ -319,7 +319,7 @@ h1 {
 	 /* align-self: center; */
 	 text-align: center;
 	 /* margin: 5px; */
-	 height: 100px;
+	 height: auto;
 }
  footer a {
 	 color: #fff;
