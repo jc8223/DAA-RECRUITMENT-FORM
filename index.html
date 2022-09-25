@@ -79,10 +79,10 @@
       <section class="section" >
         
     <header style="text-align: center;" >
-      <h3> RECRUITMENT 22</h3>
+      <h3> RECRUITMENT 2022</h3>
         </header>
         <main >
-          <form method="post" autocomplete="off" name="google-sheet">
+          <form action="https://sheetdb.io/api/v1/ho8vucmzmxido" , method="post" autocomplete="off" id="sheetdb-form">
             <div class="form-item box-item">
               <input type="text" name="Name" placeholder="Name*" value=""
               required="" />
@@ -121,10 +121,10 @@
             
               <div class="form-item box-item">
                 <label class="label"></label>
-                    <select id="country"  name="year_of_studing*">
-                      <option name="Year_of_studing" value="none">Year of studing</option>
-                      <option name="Year_of_studing" value="I year">I Year</option>
-                      <option name="Year_of_studing" value="II year">II Year</option>
+                    <select id="country"  name="year_of_studing">
+                      <option name="year_of_studing" value="none">Year of studing*</option>
+                      <option name="year_of_studing" value="I year">I Year</option>
+                      <option name="year_of_studing" value="II year">II Year</option>
                     </select>
               </div>
 
@@ -207,20 +207,24 @@
           <a href="https://www.facebook.com/srmuaa"><i  class="fa fa-facebook-square" style="font-size:30px"></i></a>
           <a href="https://twitter.com/srmuaa"><i  class="fa fa-twitter" style="font-size:30px"></i></a>
           <a href="https://youtube.com/channel/UCt3U8LCUn6BA6E3ksv1wlcg"><i  class="fa fa-youtube" style="font-size:30px"></i></a>
+          <p>Made by JATIN KUMAR GUPTA </p>
         </footer>
         <!-- <i class="wave"></i> -->
       </section>
     </div>
     <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbzh2YRv1BQ9-sSSaN4L3ikr57QeU5JXweQpjcQ48mXknU9wPIXUpjkNl-1IR_QUvfA/exec";
-      const form = document.forms["google-sheet"];
-
-      form.addEventListener("submit", (e) => {
+      var form = document.getElementById('sheetdb-form');
+      form.addEventListener("submit", e => {
         e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => (window.location.href = "thanks.html"))
-          .catch((error) => console.error("Error!", error.message));
+        fetch(form.action, {
+            method : "POST",
+            body: new FormData(document.getElementById("sheetdb-form")),
+        }).then(
+            response => response.json()
+        ).then((html) => {
+          // you can put any JS code here
+          window.location.href = 'thanks.html';
+        });
       });
     </script>
   </body>
